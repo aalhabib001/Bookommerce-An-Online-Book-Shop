@@ -15,14 +15,15 @@ const Header = () => {
     const [loggedInUser] = useContext(UserContext);
     console.log(loggedInUser)
     return (
-        <Navbar className="justify-content-between" bg="white" variant="dark">
+        <Navbar expand="lg" className="mr-auto" bg="white" variant="dark">
 
             <Link to="/">
                 <Navbar.Brand>
                     <h2 className="nav-link active text-dark">Bookommerce</h2>
                 </Navbar.Brand>
             </Link>
-
+            <Navbar.Toggle style={{backgroundColor: 'gray'}} aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="align-items-center">
                 <Link to="/" className="nav-link active text-dark">Home</Link>
                 <Link to="/orders" className="nav-link active text-dark">Orders</Link>
@@ -38,7 +39,7 @@ const Header = () => {
                         </Link>
                 }
             </Nav>
-
+            </Navbar.Collapse>
         </Navbar>
     );
 };

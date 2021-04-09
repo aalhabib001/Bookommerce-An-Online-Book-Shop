@@ -7,14 +7,14 @@ const Search = () => {
     const [contextBooks, setContextBooks] = useContext(BookContext)
     const [bookName, setBookName] = useState("")
 
-    useEffect(() => {
-        fetch('https://bookommerce.herokuapp.com/api/books?name')
-            .then(res => res.json())
-            .then(data => setContextBooks(data.books))
-            .catch(err => console.log(err))
-
-        console.log(contextBooks)
-    }, [setContextBooks])
+    // useEffect(() => {
+    //     fetch('https://bookommerce.herokuapp.com/api/books?name')
+    //         .then(res => res.json())
+    //         .then(data => setContextBooks(data.books))
+    //         .catch(err => console.log(err))
+    //
+    //     console.log(contextBooks)
+    // }, [setContextBooks])
 
     const handleBlur = (event) => {
         setBookName(event.target.value)
